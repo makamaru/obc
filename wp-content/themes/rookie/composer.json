@@ -1,0 +1,12 @@
+{
+    "name": "maka/rookie",
+    "authors": [
+        {
+            "name": "Oli Lem",
+            "email": "maka@hotmail.fr"
+        }
+    ],
+    "require": {
+        "facebook/graph-sdk": "5.6"
+    }
+}

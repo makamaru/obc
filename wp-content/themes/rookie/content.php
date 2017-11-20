@@ -60,7 +60,7 @@
 			?>
 		</div><!-- .entry-content -->
 
-		<footer class="article-header">
+		<footer class="article-header"  style="margin: 15px 0;">
 			<span class="posted-on toogleComment" data-comment="<?php the_ID(); ?>" style="margin-right: 10px;">
 				<span class="dashicons dashicons-testimonial" style="color: #666;"></span>
 				&nbsp;<b><?php comments_number( '0', '1', '%' ); ?></b>

@@ -92,6 +92,81 @@ function rookie_header_area() {
 }
 endif;
 
+// OLE override
+if ( ! function_exists( 'rookie_header_area_ole' ) ) :
+/**
+ * Display header area sections.
+ */
+function rookie_header_area_ole() {
+	$options = get_option( 'themeboy', array() );
+	if ( array_key_exists( 'logo_url', $options ) && ! empty( $options['logo_url'] ) ) {
+		$logo = $options['logo_url'];
+		$logo = esc_url( set_url_scheme( $logo ) );
+	}
+
+	if ( ! array_key_exists( 'nav_menu_search', $options ) || $options['nav_menu_search'] ) {
+		$has_search = true;
+	} else {
+		$has_search = false;
+	}
+
+	$style_options = apply_filters( 'rookie_header_image_style_options', array(
+        'background' => __( 'Background', 'rookie' ),
+        'image' => __( 'Image', 'rookie' ),
+    ) );
+
+	reset( $style_options );
+	$style = key( $style_options );
+
+	if ( array_key_exists( 'header_image_style', $options ) && array_key_exists( $options['header_image_style'], $style_options ) ) {
+		$style = $options['header_image_style'];
+	}
+
+	$header = get_header_image();
+
+	$sections = apply_filters( 'rookie_header_area_sections', array(
+		'widgets',
+		'branding',
+		'banner',
+		'menu',
+	) );
+	?>
+
+	<div class="header-area">
+		<div style="width: 50%; float: left; padding-bottom: 0;" class="site-branding<?php if ( ! isset( $logo ) && ! display_header_text() ) { ?> site-branding-empty<?php } ?>">
+			<?php if ( isset( $logo ) ) { ?>
+			<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $logo; ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
+			<?php } ?>
+			<?php if ( display_header_text() ) { ?>
+			<hgroup style="color: #<?php header_textcolor(); ?>">
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</hgroup>
+			<?php } ?>
+
+			<div class="site-menu">
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="dashicons dashicons-menu"></span></button>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				</nav><!-- #site-navigation -->
+			</div>
+
+		</div><!-- .site-branding -->
+		<!-- -->
+
+		<div id="tertiary" class="site-widgets" role="complementary" style="width: 50%; float: left; margin-top: 7px; padding:0 20px;">
+			<div class="site-widget-region">
+				<?php dynamic_sidebar( 'header-1' ); ?>
+			</div>
+		</div>
+
+
+	</div>
+
+	<?php
+}
+endif;
+
 if ( ! function_exists( 'rookie_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.

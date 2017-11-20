@@ -21,8 +21,8 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'rookie' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<?php rookie_header_area(); ?>
+	<header id="masthead" class="site-header" role="banner" style="margin-top: 0px; background-color: #2F2F2F;">
+		<?php rookie_header_area_ole(); ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

@@ -996,3 +996,126 @@ a:hover .page-title:hover {
  .single-article .sp-template-event-logos {
     text-align: left;
 }
+
+/**
+ * OLE: Override
+ */
+.comment-list {
+    margin: 0 15px;
+}
+
+/*
+OLE
+*/
+.nav-dots {
+    width: 100%;
+    bottom: 15px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.nav-dots .nav-dot.active {
+    cursor: normal;
+    background-color: rgba(153, 83, 143, 1);
+}
+
+.site-branding {
+    padding: 0em 2%;
+}
+
+/*-- FB Feed Bootstrap Override Style --*/
+
+
+/*-- Content Style --*/
+.post-footer-option li{
+    float:left;
+    margin-right:50px;
+    /*padding-bottom:15px;*/
+}
+
+.post-footer-option li a{
+    color:#AFB4BD;
+    font-weight:500;
+    font-size:1.3rem;
+}
+
+.photo-profile{
+    border:1px solid #DDD;    
+}
+
+.anchor-username h4{
+    font-weight:bold;    
+}
+
+.anchor-time{
+    color:#ADB2BB;
+    font-size:1.2rem;
+}
+
+.post-footer-comment-wrapper{
+    padding: 0px;
+    font-size: 12px;
+}
+
+.img-avatar {
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    max-width: initial;
+}
+
+.img-avatar-comment {
+    height: 32px;
+    width: 32px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    max-width: initial;
+}
+
+.img-responsive {
+    height: auto;
+    min-height: initial;
+    max-width: 100.1%;
+    border: 1px solid rgba(0, 0, 0, .1);
+    display: initial;
+}
+
+.panel-footer {
+    background-color: #f6f7f9;
+}
+
+/* OLE */
+.bloc-homepage .sp-template-event-calendar tbody td {
+    padding: 0.625em;
+}
+
+/* OLE */
+.sp-win { background-color: #5CB85C !important; }
+.sp-lose { background-color: #D9534F !important; }
+.sp-draw { background-color: #F0AD4E !important; }
+
+.post-ic .sp-template-event-logos {
+    margin-top: 0.5em;
+    font-size: 26px;
+}
+
+article h2 {
+    font-size: 26px;
+}

@@ -996,7 +996,7 @@ if ( ! function_exists( 'rookie_hex_brightness' ) ) {
 
 
 /**
- * OLI: Include event post type in main query
+ * OLE: Include event post type in main query
  */
 function query_include_event($query) {
   if ( $query->is_main_query() && $query->is_home() ) {
@@ -1006,7 +1006,7 @@ function query_include_event($query) {
     ));
   }
 }
-add_action( 'pre_get_posts', 'query_include_event' );
+add_action('pre_get_posts', 'query_include_event');
 
 /**
  * TTX: Remove "Site URL" in comments
