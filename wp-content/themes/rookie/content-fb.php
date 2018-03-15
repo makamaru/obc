@@ -11,12 +11,9 @@ date_default_timezone_set('Europe/Paris');
 
 require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
 
-// $app_id = 'badmania.fr';
-$app_id = 'obc.fr';
-// $app_id = 'navayoga.fr';
-$app_secret = '9a5fe3e2833c131b26174b4b8bcb1a4f';
-$token = '1721274561502192|LhICD9mjzOWgS1hkJs-_kb1s-yU';
-
+$app_id = FB_API_ID;
+$app_secret = FB_API_SECRET;
+$token = FB_API_TOKEN;
 
 $fb = new \Facebook\Facebook([
   'app_id' => $app_id,
